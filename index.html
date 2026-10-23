@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Absolute Cooked Store: kitchen equipment, groceries and healthy food</title>
+<meta name="description" content="Hand-picked kitchen equipment, groceries, healthy food and cooking essentials.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Absolute Cooked Store">
+<meta property="og:description" content="Hand-picked kitchen equipment, groceries, healthy food and cooking essentials.">
+<meta property="og:image" content="og.png">
+<meta name="theme-color" content="#0e1407">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<div class="gridbg" aria-hidden="true"></div>
+<a class="skip" href="#products">Skip to products</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="Absolute Cooked Store home"><img src="logo.png" alt="" width="30" height="30"><span>Absolute <b>Cooked</b></span><em>store</em></a>
+    <div class="tools">
+      <a class="tb" id="hub" href="#"><span>ascyst</span> &larr;</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle light and dark theme"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 3a7 7 0 0 0 0 14z" fill="currentColor"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="mast">
+    <div><p class="mono"><i class="dot"></i>hand-picked kitchen finds</p>
+    <h1>Kitchen gear, groceries and <b>healthy food</b>.</h1>
+    <p>Things we would actually cook with. Every item links straight to the seller.</p></div>
+    <div class="logo" aria-hidden="true"><img src="logo.png" alt="" width="108" height="108"><i></i><i></i><i></i><i></i></div>
+  </section>
+  <div class="bar" role="search">
+    <label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search products" autocomplete="off" spellcheck="false" aria-label="Search products"><kbd class="hint">/</kbd></label>
+    <div class="ctl">
+      <select id="sort" aria-label="Sort products"><option value="featured">Featured first</option><option value="name">Name A&ndash;Z</option></select>
+      <button class="tb" id="savedBtn" type="button" aria-pressed="false">Saved <b id="sc">0</b></button>
+    </div>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+  <div class="meta"><span id="n"></span><span id="disc"></span></div>
+  <section id="products" class="grid" aria-live="polite"></section>
+  <p class="empty-msg" id="empty" hidden>No products match. Try another search or category.</p>
+</main>
+
+<footer class="wrap foot"><span>&copy; <span id="yr"></span> Absolute Cooked</span><span id="disc2"></span></footer>
+
+<dialog id="qv" aria-label="Product details"><div class="qv" id="qvb"></div></dialog>
+<noscript><p class="wrap">Enable JavaScript to browse the store.</p></noscript>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
